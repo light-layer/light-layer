@@ -25,16 +25,16 @@ html, body, main {
 body {
   --ll-logo-height: 9vh;
   --ll-name-element-font-size: 5vh;
-  --ll-description-element-1-font-size: 2.1vh;
-  --ll-description-element-2-font-size: 1.6vh;
+  --ll-description-element-1-font-size: 2vh;
+  --ll-description-element-2-font-size: 1.5vh;
   --interior-max-width: 25vh;
-  --calendar-heading-font-size: 1.6vh;
-  --ll-calendar-content-font-size: 1.6vh;
+  --calendar-heading-font-size: 1.5vh;
+  --ll-calendar-content-font-size: 1.5vh;
   --blinking-light-height: 1.8vh;
 	--blinking-light-width: 2.25vh;
-  --interior-max-width: 22vh;
+  --interior-max-width: 20vh;
   --ll-name-margin: 2vh 0%;
-  --ll-description-margin: 0vh 0% 1vh 0%;
+  --ll-description-margin: 0vh 0% 4vh 0%;
   --ll-calendar-top-margin: 2vh;
   --calendar-heading-padding: 0 10vw 0.45vh 10vw;
 }
