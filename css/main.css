@@ -30,11 +30,11 @@ body {
   --interior-max-width: 25vh;
   --calendar-heading-font-size: 1.6vh;
   --ll-calendar-content-font-size: 1.6vh;
-  --blinking-light-height: 1.25vh;
-	--blinking-light-width: 2vh;
+  --blinking-light-height: 1.8vh;
+	--blinking-light-width: 2.25vh;
   --interior-max-width: 22vh;
-  --ll-name-margin: 4vh 0%;
-  --ll-description-margin: 1vh 0% 1vh 0%;
+  --ll-name-margin: 2vh 0%;
+  --ll-description-margin: 0vh 0% 1vh 0%;
   --ll-calendar-top-margin: 2vh;
   --calendar-heading-padding: 0 10vw 0.45vh 10vw;
 }
@@ -247,10 +247,10 @@ text {
 
 @font-face {
   font-family: 'Galvji';
-  src: url('../fonts/Galvji/Galvji-01.ttf');
+  src: url('fonts/Galvji/Galvji-01.ttf');
 }
 
 @font-face {
   font-family: 'Source Code Variable';
-  src: url('../fonts/SourceCodeVariable/SourceCodePro-Light.ttf');
+  src: url('fonts/SourceCodeVariable/SourceCodePro-Light.ttf');
 }
