@@ -193,9 +193,6 @@ async function animatePageLoad(){
     station.classList.remove("hidden");
     calendarContainer.classList.add("visible");
     calendarContainer.classList.remove("hidden");
-
-    arc.setAttribute("style", "background-color: #ededed");
-    myPath.setAttribute("stroke", "#ededed");
 }
 
 async function loadPage(){

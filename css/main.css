@@ -186,14 +186,14 @@ body {
 }
 
 .ll-date {
-  min-width: fit-content;
-  max-width: 30%;
+  min-width: fit-content, -moz-fit-content;
+  width: 15%;
   border-right: 0.25vh black solid;
 }
 
 .ll-location {
-  min-width: fit-content;
-  max-width: 70%;
+  min-width: fit-content, -moz-fit-content;
+  width: 85%;
 }
 
 .ll-date, .ll-location {
