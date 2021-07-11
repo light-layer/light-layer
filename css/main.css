@@ -247,10 +247,10 @@ text {
 
 @font-face {
   font-family: 'Galvji';
-  src: url('fonts/Galvji/Galvji-01.ttf');
+  src: url('../fonts/Galvji/Galvji-01.ttf');
 }
 
 @font-face {
   font-family: 'Source Code Variable';
-  src: url('fonts/SourceCodeVariable/SourceCodePro-Light.ttf');
+  src: url('../fonts/SourceCodeVariable/SourceCodePro-Light.ttf');
 }
