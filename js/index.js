@@ -17,7 +17,7 @@ const calendarBody = document.getElementById("ll-calendar-body");
 const calendarHeader = document.getElementById("ll-calendar-header");
 
 async function generateCalendar(){
-    fetch('json/events.json')
+    fetch('../json/events.json')
     .then(response => response.json())
     .then(obj => {
                     let calendarEvents = obj;
@@ -101,7 +101,7 @@ async function checkForBroadcasting(){
     }
 
     if (!textCreated){
-        calendarHeader.innerHTML = "Upcoming Broadcasts";
+        calendarHeader.innerHTML = "Upcoming Broadcasts (PDT)";
     }
 
 }
@@ -109,7 +109,7 @@ async function checkForBroadcasting(){
 const arcText = document.getElementById("arc-text");
 
 async function generateSongs(){
-    fetch('csv/songs.csv')
+    fetch('../csv/songs.csv')
     .then(response => response.text())
     .then(obj => {
 
