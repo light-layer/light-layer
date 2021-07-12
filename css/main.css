@@ -43,8 +43,8 @@ body {
 }
 
 #content {
-  height: 100%;
-  width: 100%;
+  height: inherit;
+  width: inherit;
   padding-top: 5vh;
   display: flex;
   flex-direction: column;
@@ -56,8 +56,8 @@ body {
 }
 
 #arc {
-  height: 100%;
-  width: 100%;
+  height: inherit;
+  width: inherit;
   position: absolute;
   z-index: -1000;
   transition: background-color 1s;
