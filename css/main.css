@@ -1,3 +1,7 @@
+:root{
+  --responsive-height: calc(var(--vh, 1vh) * 100);
+}
+
 .hidden {
   opacity: 0;
 }
@@ -11,14 +15,8 @@
 }
 
 html, body, main {
-  min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
-  min-width: 100vw;
-  max-height: 100vh;
-  max-height: calc(var(--vh, 1vh) * 100);;
-  max-width: 100vw;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);;
+  height: var(--responsive-height);
   width: 100vw;
   overflow: hidden;
   box-sizing: border-box;
@@ -30,37 +28,37 @@ body {
   --ll-name-element-font-size: 5vh;
   --ll-description-element-1-font-size: 2vh;
   --ll-description-element-2-font-size: 1.5vh;
-  --interior-max-width: 25vh;
   --calendar-heading-font-size: 1.5vh;
   --ll-calendar-content-font-size: 1.5vh;
   --blinking-light-height: 1.8vh;
 	--blinking-light-width: 2.25vh;
-  --interior-max-width: 20vh;
+  --interior-max-width: 25vh;
   --ll-name-margin: 2vh 0%;
   --ll-description-margin: 0vh 0% 4vh 0%;
-  --ll-calendar-top-margin: 2vh;
+  --ll-calendar-top-margin: 1.5vh;
   --calendar-heading-padding: 0 0 0.45vh 0;
 }
 
-#content {
+#content, #arc {
   height: inherit;
   width: inherit;
-  padding-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   position: absolute;
-  z-index: 10;
+}
+
+#content {
+  padding-top: 5vh;
+  justify-content: center;
+  z-index: 1;
 }
 
 #arc {
-  height: inherit;
-  width: inherit;
-  position: absolute;
-  z-index: -1000;
-  transition: background-color 1s;
+  justify-content: flex-end;
+  z-index: 0;
+  transition: background-color 1s, opacity 1.5s;
 }
 
 #ll-logo {
@@ -104,9 +102,6 @@ body {
 
 #ll-calendar-container {
   margin-top: var(--ll-calendar-top-margin);
-  height: fit-content;
-  width: fit-content;
-  max-width: var(--interior-max-width);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,8 +116,6 @@ body {
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  min-width: fit-content;
-  width: fit-content;
   font-weight: normal;
   margin-block: 0;
   padding: var(--calendar-heading-padding);
@@ -167,8 +160,6 @@ body {
 }
 
 #ll-calendar {
-  min-width: fit-content;
-  width: 120%;
   border-spacing: 0;
   border-collapse: collapse;
   border: none;
@@ -184,26 +175,14 @@ body {
   border-top: 0.25vh black solid;
 }
 
-.ll-calendar-element {
-  width: 100%;
-  display: flex;
-}
-
 .ll-date {
-  min-width: fit-content;
-  width: 15%;
   border-right: 0.25vh black solid;
 }
 
-.ll-location {
-  min-width: fit-content;
-  width: 85%;
-}
-
 .ll-date, .ll-location {
+  padding: 1vh;
   margin-block: 0;
   font-size: var(--ll-calendar-content-font-size);
-  padding: 2% 5%;
 }
 
 .strike-through {
@@ -223,6 +202,9 @@ body {
 
 .social-link {
   padding: 0% 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #mix-cloud-img {
@@ -239,45 +221,22 @@ body {
 
 #instagram-img:hover {
   filter: invert(64%) sepia(66%) saturate(5977%) hue-rotate(340deg) brightness(100%) contrast(92%);
-
 }
 
 #arc-svg {
-  width: 100%;
+  width: inherit;
   height: inherit;
 }
 
 text {
   font-family: 'Galvji';
   fill: #5900ff;
-  font-size: 8px;
+  font-size: 1.5vh;
 }
 
 #myPath {
   background-color: inherit;
   transition: stroke 1s;
-}
-
-.img-overlay-wrap {
-  position: relative;
-  display: inline-block; /* <= shrinks container to image size */
-  transition: transform 150ms ease-in-out;
-}
-
-.img-overlay-wrap img { /* <= optional, for responsiveness */
-   display: block;
-   max-width: 100%;
-   height: auto;
-}
-
-.img-overlay-wrap svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.img-overlay-wrap:hover {
-  transform: rotate( 15deg );
 }
 
 @font-face {
