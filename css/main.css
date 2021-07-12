@@ -190,13 +190,13 @@ body {
 }
 
 .ll-date {
-  min-width: fit-content, -moz-fit-content;
+  min-width: fit-content;
   width: 15%;
   border-right: 0.25vh black solid;
 }
 
 .ll-location {
-  min-width: fit-content, -moz-fit-content;
+  min-width: fit-content;
   width: 85%;
 }
 
@@ -216,8 +216,8 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: fit-content, -moz-fit-content;
-  height: fit-content, -moz-fit-content;
+  width: fit-content;
+  height: fit-content;
   transition: opacity 2s;
 }
 
