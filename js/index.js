@@ -4,9 +4,7 @@ const arcSvg = document.getElementById("arc-svg");
 
 function pageSize(){
 
-    main.style.setProperty("min-height", `${window.innerHeight}px`);
-    main.style.setProperty("height", `${window.innerHeight}px`);
-    main.style.setProperty("max-height", `${window.innerHeight}px`);
+    document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`);
 
     if (innerWidth > 750 || innerHeight < innerWidth){
         arcSvg.setAttribute("viewBox", "-60 -40 235.46 300");
