@@ -36,7 +36,7 @@ body {
   --ll-name-margin: 2vh 0%;
   --ll-description-margin: 0vh 0% 4vh 0%;
   --ll-calendar-top-margin: 2vh;
-  --calendar-heading-padding: 0 10vw 0.45vh 10vw;
+  --calendar-heading-padding: 0 0 0.45vh 0;
 }
 
 #content {
@@ -119,6 +119,7 @@ body {
   text-align: center;
   white-space: nowrap;
   min-width: fit-content;
+  width: fit-content;
   font-weight: normal;
   margin-block: 0;
   padding: var(--calendar-heading-padding);
@@ -204,6 +205,38 @@ body {
 
 .strike-through {
   text-decoration: line-through;
+}
+
+#ll-socials-container {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content, -moz-fit-content;
+  height: fit-content, -moz-fit-content;
+  transition: opacity 2s;
+}
+
+.social-link {
+  padding: 0% 1vh;
+}
+
+#mix-cloud-img {
+  height: 3.5vh;
+}
+
+#mix-cloud-img:hover {
+  filter: invert(10%) sepia(91%) saturate(6636%) hue-rotate(262deg) brightness(101%) contrast(130%);
+}
+
+#instagram-img {
+  height: 2.5vh;
+}
+
+#instagram-img:hover {
+  filter: invert(64%) sepia(66%) saturate(5977%) hue-rotate(340deg) brightness(100%) contrast(92%);
+
 }
 
 svg {
