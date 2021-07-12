@@ -164,6 +164,7 @@ const station = document.getElementById("ll-station");
 const calendarContainer = document.getElementById("ll-calendar-container");
 const arc = document.getElementById("arc");
 const myPath = document.getElementById("myPath");
+const socialLinksContainer = document.getElementById("ll-socials-container")
 
 async function animatePageLoad(){
 
@@ -193,6 +194,8 @@ async function animatePageLoad(){
     station.classList.remove("hidden");
     calendarContainer.classList.add("visible");
     calendarContainer.classList.remove("hidden");
+    socialLinksContainer.classList.add("visible");
+    socialLinksContainer.classList.remove("hidden");
 }
 
 async function loadPage(){
