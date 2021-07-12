@@ -1,14 +1,6 @@
 {
     "events": [
         {
-            "date": "07/10",
-            "displayTime": "10-11am",
-            "startTime": "10:00",
-            "endTime": "21:00",
-            "location": "KZSU",
-            "linkToListen": "http://kzsu.stanford.edu"
-        },
-        {
             "date": "07/14",
             "displayTime": "4-5am",
             "startTime": "04:00",
@@ -29,6 +21,14 @@
             "displayTime": "10-11am",
             "startTime": "10:00",
             "endTime": "11:00",
+            "location": "KZSU",
+            "linkToListen": "http://kzsu.stanford.edu"
+        },
+        {
+            "date": "07/24",
+            "displayTime": "10-11am",
+            "startTime": "14:00",
+            "endTime": "15:00",
             "location": "KZSU",
             "linkToListen": "http://kzsu.stanford.edu"
         }
