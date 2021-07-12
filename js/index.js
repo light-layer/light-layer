@@ -6,13 +6,17 @@ function pageSize(){
 
     document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`);
 
-    if (innerWidth > 750 || innerHeight < innerWidth){
+    if (innerHeight/innerWidth >= 2){
+        arcSvg.setAttribute("viewBox", "-16 -20 150 280");
+        arcSvg.setAttribute("preserveAspectRatio", "none");
+    }
+    else if (innerHeight < innerWidth){
         arcSvg.setAttribute("viewBox", "-60 -40 235.46 300");
-        arcSvg.removeAttribute("preserveAspectRatio", "none");
+        arcSvg.removeAttribute("preserveAspectRatio");
     }
     else {
         arcSvg.setAttribute("viewBox", "-16 -20 150 280");
-        arcSvg.setAttribute("preserveAspectRatio", "none");
+        arcSvg.removeAttribute("preserveAspectRatio");
     }
 }
 window.onresize = pageSize;
@@ -110,6 +114,7 @@ async function checkForBroadcasting(){
 
 }
 
+const arc = document.getElementById("arc");
 const arcText = document.getElementById("arc-text");
 
 async function generateSongs(){
@@ -143,7 +148,7 @@ async function generateSongs(){
             arcText.innerHTML +=
             `<animate
               attributeName="startOffset"
-              from="-320%"
+              from="-333%"
               to ="100%"
               dur="60s"
               repeatCount="indefinite"
@@ -158,6 +163,9 @@ async function generateSongs(){
               values="#006400;#000080;gray"
               calcMode="paced"/> -->`
         }
+
+        arc.classList.add("visible");
+        arc.classList.remove("hidden");
     });
 }
 
@@ -166,7 +174,6 @@ const lightLayerHeaders = document.getElementsByClassName("ll-name-element");
 const description = document.getElementById("ll-description");
 const station = document.getElementById("ll-station");
 const calendarContainer = document.getElementById("ll-calendar-container");
-const arc = document.getElementById("arc");
 const myPath = document.getElementById("myPath");
 const socialLinksContainer = document.getElementById("ll-socials-container")
 
@@ -179,16 +186,16 @@ async function animatePageLoad(){
     arc.setAttribute("style", "background-color: #f2f2f2");
     myPath.setAttribute("stroke", "#f2f2f2");
 
-    /* Waits 250 milliseconds */
+    /* Waits 1200 milliseconds */
     await new Promise(r => setTimeout(r, 1200));
 
-    /* Transitions the two segments of the logo "light" and "layer", 250 milliseconds apart */
+    /* Transitions the two segments of the logo "light" and "layer" */
     for (let i = 0; i < lightLayerHeaders.length; i++){
         lightLayerHeaders[i].classList.add("visible");
         lightLayerHeaders[i].classList.remove("hidden");
     }
 
-    /* Waits 250 milliseconds */
+    /* Waits 100 milliseconds */
     await new Promise(r => setTimeout(r, 100));
 
     /* Transitions description down */
@@ -208,6 +215,7 @@ async function loadPage(){
     await new Promise(r => setTimeout(r, 250));
     checkForBroadcasting();
     animatePageLoad();
+    await new Promise(r => setTimeout(r, 3000));
     generateSongs();
 }
 
