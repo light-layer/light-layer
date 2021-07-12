@@ -11,7 +11,7 @@ function pageSize(){
         arcSvg.removeAttribute("preserveAspectRatio", "none");
     }
     else {
-        arcSvg.setAttribute("viewBox", "-15 -55 150 300");
+        arcSvg.setAttribute("viewBox", "-16 -20 150 280");
         arcSvg.setAttribute("preserveAspectRatio", "none");
     }
 }
