@@ -85,6 +85,8 @@ body {
   text-align: center;
   height: var(--announcement-height);
   opacity: var(--announcement-opacity);
+  font-family: 'Source Code Variable', Source Code Variable, monospace;
+  font-weight: normal;
   transition: all 2s;
   position: relative;
 }
@@ -109,7 +111,7 @@ body {
 .ll-name-element {
   margin-block: 0;
   font-size: var(--ll-name-element-font-size);
-  font-weight: bolder;
+  font-weight: normal;
   transition: opacity 1.5s;
 }
 
@@ -279,5 +281,5 @@ text {
 
 @font-face {
   font-family: 'Source Code Variable';
-  src: url('../fonts/SourceCodeVariable/SourceCodePro-Light.ttf');
+  src: url('../fonts/SourceCodeVariable/SourceCodeVariable-Roman.ttf');
 }

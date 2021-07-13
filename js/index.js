@@ -211,7 +211,7 @@ async function animatePageLoad(){
     myPath.setAttribute("stroke", "#f2f2f2");
 
     /* Waits 1200 milliseconds */
-    await new Promise(r => setTimeout(r, 1000));
+    await new Promise(r => setTimeout(r, 1200));
 
     /* Transitions the two segments of the logo "light" and "layer" */
     for (let i = 0; i < lightLayerHeaders.length; i++){
@@ -241,7 +241,7 @@ async function loadPage(){
     animatePageLoad();
     generateSongs();
     createAnnouncements();
-    await new Promise(r => setTimeout(r, 15000));
+    await new Promise(r => setTimeout(r, 10000));
     activateAnnouncements();
 }
 
