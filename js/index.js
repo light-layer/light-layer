@@ -125,7 +125,8 @@ async function generateSongs(){
         const songsCsv = obj;
         const songsCsvSeparated = songsCsv.split("\n");
 
-        let arcOutput = "";
+        let oneArcLength = 143;                                 /* One go around the arc is around 143 characters */
+        let arcOutput = "Airing this week: ";
         let counter = 0;
         songsCsvSeparated.forEach(value => {
             const songSeparated = value.split("\t");
@@ -143,13 +144,18 @@ async function generateSongs(){
             counter++;
         });
 
+        let totalLengthPercent = (((arcOutput.length + oneArcLength) - oneArcLength)/oneArcLength) * 100;
+
+        console.log(totalLengthPercent);
+
         if (arcOutput !== ""){
             arcText.innerHTML = arcOutput;
             arcText.innerHTML +=
             `<animate
               attributeName="startOffset"
-              from="-333%"
-              to ="100%"
+              from="100%"
+              to ="-${totalLengthPercent}%"
+              begin="3s"
               dur="60s"
               repeatCount="indefinite"
               restart="always"
@@ -215,7 +221,6 @@ async function loadPage(){
     await new Promise(r => setTimeout(r, 250));
     checkForBroadcasting();
     animatePageLoad();
-    await new Promise(r => setTimeout(r, 3000));
     generateSongs();
 }
 
