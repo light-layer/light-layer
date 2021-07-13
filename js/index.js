@@ -155,7 +155,7 @@ async function generateSongs(){
               attributeName="startOffset"
               from="100%"
               to ="-${totalLengthPercent}%"
-              begin="3s"
+              begin="0.5s"
               dur="60s"
               repeatCount="indefinite"
               restart="always"
@@ -193,7 +193,7 @@ async function animatePageLoad(){
     myPath.setAttribute("stroke", "#f2f2f2");
 
     /* Waits 1200 milliseconds */
-    await new Promise(r => setTimeout(r, 1200));
+    await new Promise(r => setTimeout(r, 1000));
 
     /* Transitions the two segments of the logo "light" and "layer" */
     for (let i = 0; i < lightLayerHeaders.length; i++){
