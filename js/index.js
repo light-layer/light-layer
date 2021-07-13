@@ -175,6 +175,24 @@ async function generateSongs(){
     });
 }
 
+const announcement = document.getElementById("ll-announcement");
+
+async function createAnnouncements(){
+    fetch('../json/announcements.json')
+    .then(response => response.json())
+    .then(obj => {
+        if (obj.announcements.length > 0){
+            announcement.innerHTML += `<span id="announcement-text" class="hidden">${obj.announcements[0].date} - ${obj.announcements[0].announcement}</span>`;
+        }
+    });
+}
+
+function activateAnnouncements(){
+    body.classList.add("announcement");
+    document.getElementById("announcement-text").classList.add("visible");
+    document.getElementById("announcement-text").classList.remove("hidden");
+}
+
 const logo = document.getElementById("ll-logo");
 const lightLayerHeaders = document.getElementsByClassName("ll-name-element");
 const description = document.getElementById("ll-description");
@@ -222,6 +240,9 @@ async function loadPage(){
     checkForBroadcasting();
     animatePageLoad();
     generateSongs();
+    createAnnouncements();
+    await new Promise(r => setTimeout(r, 15000));
+    activateAnnouncements();
 }
 
 window.onload = loadPage;
