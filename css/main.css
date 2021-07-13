@@ -14,6 +14,13 @@
   transform: translateY(-50%);
 }
 
+.announcement {
+  --announcement-display: block;
+  --announcement-height: 12vh;
+  --announcement-opacity: hidden;
+  --announcement-font-size: 1.5vh;
+}
+
 html, body, main {
   height: 100vh;
   height: var(--responsive-height);
@@ -24,6 +31,10 @@ html, body, main {
 }
 
 body {
+  --announcement-display: none;
+  --announcement-height: 0;
+  --announcement-opacity: visible;
+  --announcement-font-size: 0;
   --ll-logo-height: 9vh;
   --ll-name-element-font-size: 5vh;
   --ll-description-element-1-font-size: 2vh;
@@ -50,7 +61,7 @@ body {
 }
 
 #content {
-  padding-top: 5vh;
+  padding-top: 7.5vh;
   justify-content: center;
   z-index: 1;
 }
@@ -65,6 +76,28 @@ body {
   height: var(--ll-logo-height);
   max-width: var(--interior-max-width);
   transition: opacity 3s ease-in, transform 2s ease-out;
+}
+
+#ll-announcement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: var(--announcement-height);
+  opacity: var(--announcement-opacity);
+  transition: all 2s;
+  position: relative;
+}
+
+#announcement-text {
+  position: absolute;
+  font-size: var(--announcement-font-size);
+  transition: font-size 2s;
+}
+
+#speech-bubble {
+  height: 100%;
+  transition: all 2s;
 }
 
 #ll-name {
