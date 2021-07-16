@@ -121,7 +121,7 @@ body {
 #ll-description, #ll-station {
   margin: var(--ll-description-margin);
   max-width: var(--interior-max-width);
-  transition: opacity 2s;
+  transition: opacity 2s, margin 1s;
 }
 
 #ll-description-element-1, #ll-station-element {
@@ -235,7 +235,7 @@ body {
   justify-content: center;
   width: fit-content;
   height: fit-content;
-  transition: opacity 2s;
+  transition: opacity 2s, margin-top 1s;
 }
 
 .social-link {
