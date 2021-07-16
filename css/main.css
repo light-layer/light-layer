@@ -19,6 +19,8 @@
   --announcement-height: 12vh;
   --announcement-opacity: hidden;
   --announcement-font-size: 1.5vh;
+  --margin-top-socials: 2.5vh;
+  --ll-description-margin: 0vh 0% 3vh 0%;
 }
 
 html, body, main {
@@ -48,6 +50,7 @@ body {
   --ll-description-margin: 0vh 0% 4vh 0%;
   --ll-calendar-top-margin: 1.5vh;
   --calendar-heading-padding: 0 0 0.45vh 0;
+  --margin-top-socials: 5vh;
 }
 
 #content, #arc {
@@ -225,7 +228,7 @@ body {
 }
 
 #ll-socials-container {
-  margin-top: 5vh;
+  margin-top: var(--margin-top-socials);
   display: flex;
   flex-direction: row;
   align-items: center;
