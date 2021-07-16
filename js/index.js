@@ -182,7 +182,7 @@ async function createAnnouncements(){
     .then(response => response.json())
     .then(obj => {
         if (obj.announcements.length > 0){
-            announcement.innerHTML += `<span id="announcement-text" class="hidden">${obj.announcements[0].date} - ${obj.announcements[0].announcement}</span>`;
+            announcement.innerHTML += `<span id="announcement-text" class="hidden"><b>${obj.announcements[0].date}</b> ${obj.announcements[0].announcement}</span>`;
         }
     });
 }
@@ -241,7 +241,7 @@ async function loadPage(){
     animatePageLoad();
     generateSongs();
     createAnnouncements();
-    await new Promise(r => setTimeout(r, 10000));
+    await new Promise(r => setTimeout(r, 5000));
     activateAnnouncements();
 }
 
