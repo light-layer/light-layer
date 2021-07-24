@@ -42,6 +42,7 @@ async function generateCalendar(){
                             const endTime = event.endTime;
                             const location = event.location;
                             const linkToListen = event.linkToListen;
+                            const linkColor = event.linkColor
 
                             let classes = "ll-calendar-element ";
                             if (i === 0){
@@ -62,7 +63,7 @@ async function generateCalendar(){
                             calendarBody.innerHTML +=
                             `<tr class="${classes}" date="${event.date}" timeStart="${startTime}" timeEnd="${endTime}" location="${location}" linkToListen="${linkToListen}">
                                 <td class="ll-date${date}</td>
-                                <td class="ll-location${displayTime} ${location}</td>
+                                <td class="ll-location${displayTime} <a href=${linkToListen} style="background-color:#FFE0E0;border:none;color:${linkColor};padding:5px7px;text-align:center;text-decoration:none;display:inline-block;margin:4px4px;cursor:pointer;border-radius: 10px;">${location}</a></td>
                             </tr>`;
                         }
                     }
@@ -241,7 +242,7 @@ async function loadPage(){
     animatePageLoad();
     generateSongs();
     createAnnouncements();
-    await new Promise(r => setTimeout(r, 5000));
+    await new Promise(r => setTimeout(r, 1000));
     activateAnnouncements();
 }
 

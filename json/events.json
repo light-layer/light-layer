@@ -6,7 +6,8 @@
             "startTime": "14:00",
             "endTime": "15:00",
             "location": "KZSU",
-            "linkToListen": "http://kzsu.stanford.edu"
+            "linkToListen": "http://kzsu.stanford.edu",
+            "linkColor": "#CF0000"
         },
         {
             "date": "07/26",
@@ -14,7 +15,8 @@
             "startTime": "10:00",
             "endTime": "11:00",
             "location": "KZSU",
-            "linkToListen": "http://kzsu.stanford.edu"
+            "linkToListen": "http://kzsu.stanford.edu",
+            "linkColor": "#CF0000"
         },
         {
             "date": "07/30",
@@ -22,7 +24,8 @@
             "startTime": "10:00",
             "endTime": "11:00",
             "location": "KZSU",
-            "linkToListen": "http://kzsu.stanford.edu"
+            "linkToListen": "http://kzsu.stanford.edu",
+            "linkColor": "#CF0000"
         }
     ]
 }

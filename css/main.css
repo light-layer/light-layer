@@ -286,3 +286,21 @@ text {
   font-family: 'Source Code Variable';
   src: url('../fonts/SourceCodeVariable/SourceCodeVariable-Roman.ttf');
 }
+
+a.one:link {
+  background-color: rgb(221, 224, 255);
+  border: none;
+  color: rgb(79, 119, 252);
+  padding: 5px 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 4px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+a.one:hover {
+  background-color: rgb(144, 153, 253);
+  color: rgb(239, 242, 255);
+  }
