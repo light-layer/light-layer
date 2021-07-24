@@ -242,7 +242,7 @@ async function loadPage(){
     animatePageLoad();
     generateSongs();
     createAnnouncements();
-    await new Promise(r => setTimeout(r, 1000));
+    await new Promise(r => setTimeout(r, 10000));
     activateAnnouncements();
 }
 
