@@ -1,7 +1,7 @@
 {
     "events": [
         {
-            "date": "07/23",
+            "date": "07/30",
             "displayTime": "2-3pm",
             "startTime": "14:00",
             "endTime": "15:00",
@@ -10,7 +10,7 @@
             "linkColor": "#CF0000"
         },
         {
-            "date": "07/26",
+            "date": "08/02",
             "displayTime": "10-11am",
             "startTime": "10:00",
             "endTime": "11:00",
@@ -19,10 +19,10 @@
             "linkColor": "#CF0000"
         },
         {
-            "date": "07/30",
-            "displayTime": "10-11am",
-            "startTime": "10:00",
-            "endTime": "11:00",
+            "date": "08/06",
+            "displayTime": "2-3pm",
+            "startTime": "14:00",
+            "endTime": "15:00",
             "location": "KZSU",
             "linkToListen": "http://kzsu.stanford.edu",
             "linkColor": "#CF0000"
