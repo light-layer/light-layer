@@ -1,7 +1,7 @@
 {
     "events": [
         {
-            "date": "09/24",
+            "date": "10/01",
             "displayTime": "2-3pm",
             "startTime": "14:00",
             "endTime": "15:00",
@@ -10,7 +10,7 @@
             "linkColor": "#CF0000"
         },
         {
-            "date": "09/27",
+            "date": "10/04",
             "displayTime": "10-11am",
             "startTime": "10:00",
             "endTime": "11:00",
@@ -19,7 +19,7 @@
             "linkColor": "#CF0000"
         },
         {
-            "date": "10/01",
+            "date": "10/08",
             "displayTime": "2-3pm",
             "startTime": "14:00",
             "endTime": "15:00",
