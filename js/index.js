@@ -127,23 +127,23 @@ async function generateSongs(){
         const songsCsvSeparated = songsCsv.split("\n");
 
         let oneArcLength = 143;                                 /* One go around the arc is around 143 characters */
-        let arcOutput = "Airing this week: " + "TBA";
-        let counter = 0;
-        songsCsvSeparated.forEach(value => {
-            const songSeparated = value.split("\t");
+        let arcOutput = songsCsv/* = "Airing this week: " + "TBA"*/;
+        // let counter = 0;
+        // songsCsvSeparated.forEach(value => {
+        //     const songSeparated = value.split("\t");
 
-            if (songSeparated.length === 6){
-                const artist = songSeparated[0];
-                const song = songSeparated[1];
+        //     if (songSeparated.length === 6){
+        //         const artist = songSeparated[0];
+        //         const song = songSeparated[1];
 
-                arcOutput += song + " - " + artist;
+        //         arcOutput += song + " - " + artist;
 
-                if (counter !== songsCsvSeparated.length - 1){
-                    arcOutput += " / ";
-                }
-            }
-            counter++;
-        });
+        //         if (counter !== songsCsvSeparated.length - 1){
+        //             arcOutput += " / ";
+        //         }
+        //     }
+        //     counter++;
+        // });
 
         let totalLengthPercent = (((arcOutput.length + oneArcLength) - oneArcLength)/oneArcLength) * 100;
 
