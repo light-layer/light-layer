@@ -110,7 +110,7 @@ async function checkForBroadcasting(){
     }
 
     if (!textCreated){
-        calendarHeader.innerHTML = "Upcoming Broadcasts (PDT)";
+        calendarHeader.innerHTML = "Calendar (PDT)";
     }
 
 }
