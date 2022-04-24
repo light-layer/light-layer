@@ -1,10 +1,10 @@
 {
     "events": [
         {
-            "date": "11/26",
-            "displayTime": "2-3pm",
-            "startTime": "14:00",
-            "endTime": "15:00",
+            "date": "Apr 29",
+            "displayTime": "4-5pm",
+            "startTime": "16:00",
+            "endTime": "17:00",
             "location": "KZSU",
             "linkToListen": "http://kzsu.stanford.edu",
             "linkColor": "#CF0000"
