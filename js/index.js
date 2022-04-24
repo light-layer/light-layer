@@ -63,7 +63,7 @@ async function generateCalendar(){
                             calendarBody.innerHTML +=
                             `<tr class="${classes}" date="${event.date}" timeStart="${startTime}" timeEnd="${endTime}" location="${location}" linkToListen="${linkToListen}">
                                 <td class="ll-date${date}</td>
-                                <td class="ll-location${displayTime} <a href=${linkToListen} style="background-color:#FFE0E0;border:none;color:${linkColor};padding:5px7px;text-align:center;text-decoration:none;display:inline-block;margin:4px4px;cursor:pointer;border-radius: 10px;">${location}</a></td>
+                                <td class="ll-location${displayTime} on <a href=${linkToListen} style="background-color:#FFE0E0;border:none;color:${linkColor};padding:5px7px;text-align:center;text-decoration:none;display:inline-block;margin:4px4px;cursor:pointer;border-radius: 4px;">${location}</a></td>
                             </tr>`;
                         }
                     }
