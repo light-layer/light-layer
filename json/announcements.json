@@ -1,8 +1,11 @@
 {
     "announcements": [
-        {
-            "date": "Aug 16:",
-            "announcement": "Summer days are better with friends."
-        }
+      {
+        "date": "Aug 15:",
+        "announcement": [
+          "New broadcasts inbound 🛩️"
+        ]
+      }
     ]
-}
+  }
+  

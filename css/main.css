@@ -13,6 +13,10 @@
 .above-page {
   transform: translateY(-50%);
 }
+.cursor {
+  opacity: 1;
+  animation: blink 1s infinite;
+}
 
 .announcement {
   --announcement-display: block;
@@ -285,6 +289,10 @@ text {
 @font-face {
   font-family: 'Source Code Variable';
   src: url('../fonts/SourceCodeVariable/SourceCodeVariable-Roman.ttf');
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 a.one:link {

@@ -176,6 +176,25 @@ async function generateSongs(){
     });
 }
 
+function backspaceText(element, text, index = text.length) {
+    if (index > 0) {
+        element.innerHTML = text.substring(0, index - 1);
+        setTimeout(() => backspaceText(element, text, index - 1), 100);
+    } else {
+        element.innerHTML = ""; // Clear the content after the backspace is complete
+    }
+}
+
+function typeText(element, text, index = 0) {
+    if (index < text.length) {
+        element.innerHTML = text.substring(0, index + 1);
+        setTimeout(() => typeText(element, text, index + 1), 100);
+    } else {
+        // Wait 2 seconds before starting the backspace animation
+        setTimeout(() => backspaceText(element, text), 2000);
+    }
+}
+
 const announcement = document.getElementById("ll-announcement");
 
 async function createAnnouncements(){
@@ -183,15 +202,24 @@ async function createAnnouncements(){
     .then(response => response.json())
     .then(obj => {
         if (obj.announcements.length > 0){
-            announcement.innerHTML += `<span id="announcement-text" class="hidden"><b>${obj.announcements[0].date}</b> ${obj.announcements[0].announcement}</span>`;
+            const announcementText = document.createElement("span");
+            announcementText.id = "announcement-text";
+            announcementText.className = "hidden";
+            announcement.appendChild(announcementText);
+            announcementText.innerHTML += `<b>${obj.announcements[0].date}</b> ${obj.announcements[0].announcement}`;
         }
     });
 }
 
 function activateAnnouncements(){
     body.classList.add("announcement");
-    document.getElementById("announcement-text").classList.add("visible");
-    document.getElementById("announcement-text").classList.remove("hidden");
+    setTimeout(() => {
+        const announcementText = document.getElementById("announcement-text");
+        announcementText.classList.add("visible");
+        announcementText.classList.remove("hidden");
+        typeText(announcementText, announcementText.textContent);
+        announcementText.innerHTML = ""; // Clear the content so that typing can start from the beginning
+    }, 1000); // Adjust the time based on when you want the typing to start
 }
 
 const logo = document.getElementById("ll-logo");
@@ -241,8 +269,9 @@ async function loadPage(){
     checkForBroadcasting();
     animatePageLoad();
     generateSongs();
+    await new Promise(r => setTimeout(r, 5000));
     createAnnouncements();
-    await new Promise(r => setTimeout(r, 10000));
+    await new Promise(r => setTimeout(r, 1000));
     activateAnnouncements();
 }
 
